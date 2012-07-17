@@ -1,0 +1,1 @@
+# chef-solo cookbooks for Ruby on Rails app
