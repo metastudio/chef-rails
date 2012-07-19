@@ -1,0 +1,7 @@
+{
+  "name": "application",
+  "description": "Ruby on Rails application",
+  "run_list": [ "recipe[application::default]" ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
