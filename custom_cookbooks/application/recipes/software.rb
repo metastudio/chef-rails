@@ -1,0 +1,1 @@
+%w(build-essential git git-core htop atop screen imagemagick).map{|p| package p}
