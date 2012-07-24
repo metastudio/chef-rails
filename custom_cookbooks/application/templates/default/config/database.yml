@@ -1,0 +1,8 @@
+<%= node[:application][:environment] %>:
+	adapter: mysql2
+	encoding: utf8mb4
+	database: 
+	pool: 5
+	username: root
+	password:
+	socket: /tmp/mysql.sock

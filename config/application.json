@@ -1,0 +1,11 @@
+{
+  "run_list": [ "role[application]" ],
+  "application": {
+    "name": "example-app",
+    "path": "/var/www/rails/example-app",
+    "user": {
+      "name": "example-app"
+    },
+    "environment": "staging"
+  }
+}
