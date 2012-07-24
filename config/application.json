@@ -3,6 +3,7 @@
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
+    "url": "example-app.com",
     "user": {
       "name": "example-app"
     },

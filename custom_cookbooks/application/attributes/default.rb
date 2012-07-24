@@ -5,8 +5,5 @@ default[:application][:releases_path] = "#{node[:application][:path]}/releases"
 
 default[:application][:user][:home]   = "/home/#{node[:application][:user][:name]}"
 
-default[:database][:name]             = "#{node[:application][:name]}_#{node[:application][:environment]}"
-default[:database][:user]             = node[:application][:user][:name]
-
 default[:application][:workers]       = 2
 default[:application][:socket]        = "/tmp/#{node[:application][:name]}.socket"

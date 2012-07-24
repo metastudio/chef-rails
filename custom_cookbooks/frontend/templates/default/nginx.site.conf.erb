@@ -1,0 +1,25 @@
+upstream <%= node[:application][:name] %> {
+  server unix:<%= node[:application][:socket] %> fail_timeout=0;
+}
+
+server {
+  listen 80;
+
+  server_name <%= node[:application][:url] %>;
+
+  root <%= node[:application][:current_path] %>/public;
+
+  try_files $uri/index.html $uri.html $uri @app;
+
+  location @app {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_pass http://<%= node[:application][:name] %>;
+  }
+
+  error_page 500 502 503 504 /500.html;
+  location = /500.html {
+    root <%= node[:application][:current_path] %>/public;
+  }
+}
