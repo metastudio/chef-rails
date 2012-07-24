@@ -15,3 +15,17 @@ HOST=192.168.2.103 CONFIG=application ./deploy.sh
 ```
 
 It will install ```ruby``` and ```chef```, copy ```chef``` files to the target hostname, and run the JSON configuration with specified name.
+
+## Available Roles
+
+### application
+
+Cookbook prepares directories for capistrano deployments and does initiall app configuration (```database.yml```, ```unicorn.rb```).
+
+### frontend
+
+Installs ```nginx``` and configures it to use ```unicorn``` as upstream.
+
+### database
+
+Install MySQL server.
