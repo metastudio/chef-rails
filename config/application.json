@@ -1,5 +1,5 @@
 {
-  "run_list": [ "role[application]" ],
+  "run_list": [ "role[application]", "role[frontend]" ],
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
