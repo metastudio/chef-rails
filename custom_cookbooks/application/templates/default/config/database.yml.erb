@@ -1,0 +1,7 @@
+<%= node[:application][:environment] %>:
+  adapter: mysql2
+  encoding: utf8mb4
+  database: <%= node[:database][:name] %>
+  username: <%= node[:database][:user] %>
+  password:
+  socket: /tmp/mysql.sock
