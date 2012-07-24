@@ -7,4 +7,4 @@ mkdir ~/chef &&
 (mkdir ~/chef-cache > /dev/null 2>&1 || true) &&
 cd ~/chef &&
 tar jx &&
-HOST=$HOST ROLE=$ROLE ./install.sh"
+HOST=$HOST CONFIG=$CONFIG ./install.sh"

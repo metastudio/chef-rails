@@ -5,4 +5,13 @@ MySQL. Has been tested with Ubuntu 12.04.
 
 ## Requirements
 
-You should be able to login as `root` to the target system.
+1. You should be able to login as `root` to the target system.
+2. Ruby 1.9.3
+
+## Usage
+
+```bash
+HOST=192.168.2.103 CONFIG=application ./deploy.sh
+```
+
+It will install ```ruby``` and ```chef```, copy ```chef``` files to the target hostname, and run the JSON configuration with specified name.

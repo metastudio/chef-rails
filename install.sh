@@ -44,4 +44,4 @@ if ! test -f "$chef_binary"; then
   chef_binary=`which chef-solo`
 fi
 
-"$chef_binary" -c ~/chef/solo.rb -j ~/chef/config/${ROLE}.json
+"$chef_binary" -c ~/chef/solo.rb -j ~/chef/config/${CONFIG}.json
