@@ -1,3 +1,9 @@
 [submodule "community_cookbooks/nginx"]
 	path = community_cookbooks/nginx
 	url = https://github.com/metastudio/nginx.git
+[submodule "community_cookbooks/ohai"]
+	path = community_cookbooks/ohai
+	url = https://github.com/opscode-cookbooks/ohai.git
+[submodule "community_cookbooks/build-essential"]
+	path = community_cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git

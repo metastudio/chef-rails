@@ -1,5 +1,5 @@
 {
-  "run_list": [ "role[application]", "role[frontend]" ],
+  "run_list": [ "recipe[ohai]", "role[application]", "role[frontend]" ],
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
