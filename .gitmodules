@@ -1,3 +1,0 @@
-[submodule "community_cookbooks/nginx"]
-	path = community_cookbooks/nginx
-	url = https://github.com/metastudio/nginx.git
