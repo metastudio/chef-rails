@@ -28,4 +28,4 @@ root    ALL=(ALL:ALL) ALL
 
 #includedir /etc/sudoers.d
 
-<%= node[:application][:user][:name] %> ALL = (root) NOPASSWD: /usr/bin/monit start #{node[:application][:name]}
+<%= node[:application][:user][:name] %> ALL = (root) NOPASSWD: /usr/bin/monit start <%= node[:application][:name] %>
