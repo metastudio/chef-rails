@@ -14,6 +14,7 @@ dirs_to_create = [node[:application][:path],
   node[:application][:shared_path], 
   "#{node[:application][:shared_path]}/system",
   "#{node[:application][:shared_path]}/log",
+  "#{node[:application][:shared_path]}/pids",
   node[:application][:releases_path]]
 
 dirs_to_create.each do |directory_name|
