@@ -5,4 +5,4 @@ set[:nginx][:log_dir]         = "/usr/local/nginx/log"
 set[:nginx][:binary]          = "/usr/local/nginx/sbin/nginx"
 
 set[:nginx][:user]            = "www-data"
-set[:nginx][:init_style]      = "upstart"
+set[:nginx][:init_style]      = "init"
