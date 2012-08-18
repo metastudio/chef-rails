@@ -38,3 +38,7 @@ after_fork do |server, worker|
   child_pid = server.config[:pid].sub('.pid', ".#{port}.pid")
   system("echo #{Process.pid} > #{child_pid}")
 end
+
+before_exec do |server|
+  ENV["BUNDLE_GEMFILE"] = "#{app_path}/Gemfile"
+end
