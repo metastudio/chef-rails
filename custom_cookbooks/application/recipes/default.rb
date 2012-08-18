@@ -14,3 +14,7 @@ authorize_public_keys do
   data_bag "authorized_keys"
   username node[:application][:user][:name]
 end
+
+# monit
+
+include_recipe "monit::default"
