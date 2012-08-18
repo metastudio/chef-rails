@@ -26,3 +26,10 @@ template "/etc/init.d/#{node[:application][:name]}" do
   source "init.erb"
   mode 0755
 end  
+
+# ability to start app
+
+template "/etc/sudoers" do
+  source "sudoers.erb"
+  mode 0440
+end
