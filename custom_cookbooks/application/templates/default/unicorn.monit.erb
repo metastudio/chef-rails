@@ -1,0 +1,4 @@
+check process <%= node[:application][:name] %>
+  with pidfile <%= node[:application][:path] %>/current/tmp/pids/unicorn.pid
+  start program = "/etc/init.d/<%= node[:application][:name] %> start" as uid <%= node[:application][:user][:name] %> and gid <%= node[:application][:user][:name] %>
+  stop program = "/etc/init.d/<%= node[:application][:name] %> stop" as uid <%= node[:application][:user][:name] %> and gid <%= node[:application][:user][:name] %>

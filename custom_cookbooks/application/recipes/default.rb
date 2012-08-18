@@ -18,3 +18,11 @@ end
 # monit
 
 include_recipe "monit::default"
+include_recipe "application::monit"
+
+# init
+
+template "/etc/init.d/#{node[:application][:name]}" do
+  source "init.erb"
+  mode 0755
+end  
