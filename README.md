@@ -1,5 +1,6 @@
 # TODO
 
+* configure logrotate
 * install Percona Server and Percona Client (database recipe)
 * install Xtrabackup
 
