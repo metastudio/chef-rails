@@ -7,3 +7,6 @@
 [submodule "community_cookbooks/build-essential"]
 	path = community_cookbooks/build-essential
 	url = https://github.com/opscode-cookbooks/build-essential.git
+[submodule "community_cookbooks/htpasswd"]
+	path = community_cookbooks/htpasswd
+	url = https://github.com/Youscribe/htpasswd-cookbook.git
