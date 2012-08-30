@@ -1,2 +1,3 @@
 config/*.json
 data_bags/authorized_keys/*.json
+.DS_Store
