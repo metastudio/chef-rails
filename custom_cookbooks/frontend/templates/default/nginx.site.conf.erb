@@ -5,26 +5,17 @@ upstream <%= node[:application][:name] %> {
 server {
   listen 80;
 
-  server_name <%= node[:application][:url] %>;
-
-  root <%= node[:application][:current_path] %>/public;
-
-  try_files $uri/index.html $uri.html $uri @app;
-
-  <% if node[:application][:http_auth] %>
-  auth_basic            "Restricted";
-  auth_basic_user_file  htpasswd;
-  <% end %>
-
-  location @app {
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_redirect off;
-    proxy_pass http://<%= node[:application][:name] %>;
-  }
-
-  error_page 500 502 503 504 /500.html;
-  location = /500.html {
-    root <%= node[:application][:current_path] %>/public;
-  }
+  include sites-available/conf.d/<%= node[:application][:name] %>.include.conf;
 }
+
+<% if node[:application][:ssl] %>
+server {
+  listen 443;
+
+  ssl on;
+  ssl_certificate <%= node[:application][:ssl][:certificate_path] %>;
+  ssl_certificate_key <%= node[:application][:ssl][:certificate_key_path] %>;
+
+  keepalive_timeout 70;
+}
+<% end %>

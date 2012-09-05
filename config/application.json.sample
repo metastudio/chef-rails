@@ -7,6 +7,10 @@
     "user": {
       "name": "example-app"
     },
-    "environment": "staging"
+    "environment": "staging",
+    "ssl": {
+      "certificate_path": "/usr/local/nginx/conf/sslchain.crt",
+      "certificate_key_path": "/usr/local/nginx/conf/server.key"
+    }
   }
 }
