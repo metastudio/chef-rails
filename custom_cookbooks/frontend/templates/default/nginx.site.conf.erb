@@ -17,5 +17,7 @@ server {
   ssl_certificate_key <%= node[:application][:ssl][:certificate_key_path] %>;
 
   keepalive_timeout 70;
+
+  include sites-available/conf.d/<%= node[:application][:name] %>.include.conf;
 }
 <% end %>
