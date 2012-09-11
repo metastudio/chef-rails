@@ -2,6 +2,14 @@ upstream <%= node[:application][:name] %> {
   server unix:<%= node[:application][:socket] %> fail_timeout=0;
 }
 
+<% node[:application][:redirect_urls].each do |url| %>
+server {
+  listen 80;
+  server_name <%= url %>;
+  rewrite ^(.*) http://<%= node[:application][:url] %>$1 permanent;
+}
+<% end %>
+
 server {
   listen 80;
 

@@ -4,8 +4,14 @@
     "name": "example-app",
     "path": "/var/www/rails/example-app",
     "url": "example-app.com",
+    "redirect_urls": ["www.example-app.com"],
     "user": {
       "name": "example-app"
+    },
+    "http_auth": {
+      "user": "user",
+      "password": "password",
+      "except": ["/excepturl"]
     },
     "environment": "staging",
     "ssl": {

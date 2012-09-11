@@ -7,6 +7,15 @@ try_files $uri/index.html $uri.html $uri @app;
 <% if node[:application][:http_auth] %>
 auth_basic            "Restricted";
 auth_basic_user_file  htpasswd;
+
+  <% if node[:application][:http_auth][:except] %>
+    <% node[:application][:http_auth][:except].each do |except_url| %>
+location <%= except_url %> {
+  auth_basic off;
+  try_files $uri/index.html $uri.html $uri @app;
+}
+    <% end %>
+  <% end %>
 <% end %>
 
 location @app {
