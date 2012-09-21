@@ -18,14 +18,14 @@ MySQL. Has been tested with Ubuntu 12.04.
 
 Rename ```config/application.json.sample``` to ```config/application.json```.
 
+### user
+
+```chef``` will create user which will be an owner of app directory. ```unicorn``` also will be started by this user. This user should be used when deploying with ```capistrano```.
+
 ### redirect_urls
 
 Set if you need to permanently redirect users from some subdomains to the main domain. The most common case
 if you need to redirect them from ```www.exacmple.com``` to ```example.com```.
-
-### user
-
-```chef``` will create user which will be owner of app directory. This user should be used when deploying with ```capistrano```.
 
 ### http_auth
 
