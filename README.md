@@ -14,6 +14,23 @@ MySQL. Has been tested with Ubuntu 12.04.
 1. You should be able to login as `root` to the target system.
 2. Ruby 1.9.3
 
+## Configuration
+
+Rename ```config/application.json.sample``` to ```config/application.json```.
+
+### redirect_urls
+
+Set if you need to permanently redirect users from some subdomains to the main domain. The most common case
+if you need to redirect them from ```www.exacmple.com``` to ```example.com```.
+
+### user
+
+```chef``` will create user which will be owner of app directory. This user should be used when deploying with ```capistrano```.
+
+### http_auth
+
+This option can be used if you need to protect the website using HTTP Basic Auth. Simply remove it if you don't need it.
+
 ## Usage
 
 ```bash
