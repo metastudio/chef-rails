@@ -31,6 +31,10 @@ if you need to redirect them from ```www.exacmple.com``` to ```example.com```.
 
 This option can be used if you need to protect the website using HTTP Basic Auth. Simply remove it if you don't need it.
 
+## Passwordless deploys
+
+If you'd like to do passwordless deploys (using SSH public keys), you may wish to add public keys of users which should have such ability to the ```data_bags/authorized_keys/``` folder.
+
 ## Usage
 
 ```bash
