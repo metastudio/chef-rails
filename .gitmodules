@@ -13,3 +13,9 @@
 [submodule "community_cookbooks/redis"]
 	path = community_cookbooks/redis
 	url = https://github.com/ctrabold/chef-redis.git
+[submodule "community_cookbooks/apt"]
+	path = community_cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "community_cookbooks/yum"]
+	path = community_cookbooks/yum
+	url = https://github.com/opscode-cookbooks/yum.git

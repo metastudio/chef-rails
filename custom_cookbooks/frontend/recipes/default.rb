@@ -1,4 +1,5 @@
 include_recipe "nginx::source"
+include_recipe "nginx::monit"
 
 conf_name = "#{node[:application][:name]}.conf"
 
