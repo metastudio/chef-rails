@@ -18,5 +18,14 @@
       "certificate_path": "/usr/local/nginx/conf/sslchain.crt",
       "certificate_key_path": "/usr/local/nginx/conf/server.key"
     }
+  },
+  "nginx": {
+    "version":  "1.2.8",
+    "source":   { "prefix": "/usr/local/nginx" },
+    "dir":      "/usr/local/nginx/conf",
+    "log_dir":  "/usr/local/nginx/log",
+    "binary":   "/usr/local/nginx/sbin/nginx",
+    "user":     "www-data",
+    "init_style": "init"
   }
 }
