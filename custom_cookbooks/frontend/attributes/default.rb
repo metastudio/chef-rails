@@ -1,4 +1,4 @@
-set[:nginx][:version]         = "1.2.2"
+set[:nginx][:version]         = "1.2.8"
 set[:nginx][:source][:prefix] = "/usr/local/nginx"
 set[:nginx][:dir]             = "/usr/local/nginx/conf"
 set[:nginx][:log_dir]         = "/usr/local/nginx/log"
