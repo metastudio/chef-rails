@@ -4,7 +4,7 @@ include_recipe "application::config"
 
 # We need to generate SSH key for application account in order to add
 # it to the SCM
-generate_ssh_keys do 
+generate_ssh_keys do
   user_account node[:application][:user][:name]
 end
 

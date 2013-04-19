@@ -10,3 +10,6 @@
 [submodule "community_cookbooks/htpasswd"]
 	path = community_cookbooks/htpasswd
 	url = https://github.com/Youscribe/htpasswd-cookbook.git
+[submodule "community_cookbooks/redis"]
+	path = community_cookbooks/redis
+	url = https://github.com/ctrabold/chef-redis.git

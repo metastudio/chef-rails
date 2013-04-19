@@ -40,7 +40,7 @@ if ! test -f "$chef_binary"; then
   apt-get update &&
   apt-get -y remove ruby rubygems rubygems1.8 &&
     install_ruby && 
-    gem install --no-rdoc --no-ri chef --version 0.10.8
+    gem install --no-rdoc --no-ri chef --version '~> 11.4.0'
   chef_binary=`which chef-solo`
 fi
 
