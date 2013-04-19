@@ -5,10 +5,10 @@ chef_binary=`which chef-solo`
 # courtesy of https://github.com/joshfng/railsready
 function install_ruby {
   ruby_version="1.9.3"
-  ruby_version_string="1.9.3-p194"
-  ruby_source_url="http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz"
-  ruby_source_tar_name="ruby-1.9.3-p194.tar.gz"
-  ruby_source_dir_name="ruby-1.9.3-p194"
+  ruby_version_string="1.9.3-p392"
+  ruby_source_url="http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-${ruby_version_string}.tar.gz"
+  ruby_source_tar_name="ruby-${ruby_version_string}.tar.gz"
+  ruby_source_dir_name="ruby-${ruby_version_string}"
   ruby_install_temp_path=$(cd && pwd)/ruby-install
 
   log_file=install.log
