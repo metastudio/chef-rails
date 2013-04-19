@@ -38,8 +38,14 @@ If you'd like to do passwordless deploys (using SSH public keys), you may wish t
 ## Usage
 
 ```bash
-HOST=192.168.2.103 CONFIG=application ./deploy.sh
+USER=ubuntu HOST=192.168.2.103 CONFIG=application ./deploy.sh
 ```
+
+Where:
+
+* ```USER``` is a user name which will be used to provision server
+* ```HOST``` is a hostname of the server which will be provisioned
+* ```CONFIG``` name of configuration file in config/ directory
 
 It will install ```ruby``` and ```chef```, copy ```chef``` files to the target hostname, and run the JSON configuration with specified name.
 
