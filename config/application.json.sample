@@ -27,5 +27,18 @@
     "binary":   "/usr/local/nginx/sbin/nginx",
     "user":     "www-data",
     "init_style": "init"
+  },
+  "rvm": {
+    "default_ruby": "ruby-1.9.3",
+    "group_users": ["example-app"]
+  },
+  "authorization": {
+    "sudo": {
+      "groups": ["sudo", "admin"],
+      "include_sudoers_d": true,
+      "commands": [
+        "/usr/bin/monit -g background restart"
+      ]
+    }
   }
 }
