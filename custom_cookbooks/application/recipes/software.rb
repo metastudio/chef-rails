@@ -1,1 +1,1 @@
-%w(build-essential git git-core htop atop screen imagemagick vim libmysqlclient-dev openjdk-7-jre).map{|p| package p}
+%w(build-essential git git-core htop atop screen imagemagick vim libmysqlclient-dev openjdk-7-jre mailutils).map{|p| package p}
