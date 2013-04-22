@@ -29,7 +29,11 @@ end
 
 # ability to start app
 
-template "/etc/sudoers" do
-  source "sudoers.erb"
-  mode 0440
+commands =  [ "/usr/bin/monit start #{node[:application][:name]}" ]
+commands += node[:authorization][:sudo][:commands]
+
+sudo node[:application][:name] do
+  user     node[:application][:user][:name]
+  commands commands
+  nopasswd true
 end

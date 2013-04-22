@@ -1,1 +1,2 @@
 depends 'ssh'
+depends 'sudo'
