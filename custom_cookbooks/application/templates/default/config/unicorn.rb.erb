@@ -1,5 +1,5 @@
 rails_root = ENV['RAILS_ROOT'] || File.dirname(__FILE__) + '/..'
-rails_env  = ENV['RAILS_ENV'] || 'production'
+rails_env  = ENV['RAILS_ENV'] || '<%= node[:application][:environment] %>'
 
 worker_processes <%= node[:application][:workers] %>
 
