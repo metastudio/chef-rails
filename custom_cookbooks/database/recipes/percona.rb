@@ -29,3 +29,21 @@ mysql_database_user node[:database][:user] do
 
   action :grant
 end
+
+# xtrabackup
+
+backup_dir = "#{node[:backup][:directory]}/database"
+
+directory backup_dir do
+  recursive true
+end
+
+cron "backup database" do
+  hour "6"
+  minute "0"
+  weekday "5"
+  mailto node[:email][:support]
+  command "/bin/bash -c 'xtrabackup --backup --target-dir=#{backup_dir}'"
+
+  action :create
+end
