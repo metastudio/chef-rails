@@ -57,5 +57,11 @@
     "backup": {
       "password": "change-me"
     }
+  },
+  "backup": {
+    "directory": "/backup"
+  },
+  "email": {
+    "support": "support@example.com"
   }
 }
