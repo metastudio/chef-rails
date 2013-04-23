@@ -22,5 +22,5 @@ cookbook 'postfix'
 # Database
 
 cookbook 'redis', git: 'https://github.com/ctrabold/chef-redis.git'
-cookbook 'percona', git: 'https://github.com/phlipper/chef-percona'
+cookbook 'percona', git: 'https://github.com/phlipper/chef-percona.git'
 cookbook 'database'
