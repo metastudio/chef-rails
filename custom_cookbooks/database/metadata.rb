@@ -1,0 +1,2 @@
+depends 'percona'
+depends 'database'

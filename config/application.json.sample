@@ -48,5 +48,14 @@
         "/usr/bin/monit -g background restart"
       ]
     }
+  },
+ "percona": {
+    "server": {
+      "debian_password": "change-me",
+      "root_password": "change-me"
+    },
+    "backup": {
+      "password": "change-me"
+    }
   }
 }
