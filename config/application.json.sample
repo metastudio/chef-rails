@@ -1,5 +1,13 @@
 {
-  "run_list": [ "recipe[ohai]", "role[application]", "role[frontend]", "recipe[redis]", "recipe[rvm::system]", "recipe[postfix]" ],
+  "run_list": [ 
+    "recipe[ohai]", 
+    "role[application]", 
+    "role[frontend]", 
+    "recipe[redis]", 
+    "recipe[rvm::system]", 
+    "recipe[postfix]",
+    "recipe[database::percona]"
+  ],
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
