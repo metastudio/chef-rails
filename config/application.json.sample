@@ -1,5 +1,5 @@
 {
-  "run_list": [ "recipe[ohai]", "role[application]", "role[frontend]" ],
+  "run_list": [ "recipe[ohai]", "role[application]", "role[frontend]", "recipe[redis]", "recipe[rvm::system]", "recipe[postfix]" ],
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
@@ -19,9 +19,17 @@
       "certificate_key_path": "/usr/local/nginx/conf/server.key"
     }
   },
+  "database": {
+    "host":     "mysql.picyou.com",
+    "name":     "picyou_staging",
+    "user":     "picyou-staging",
+    "password": "sfu9AByd8a&Shjdb28h"
+  },
   "nginx": {
-    "version":  "1.2.8",
-    "source":   { "prefix": "/usr/local/nginx" },
+    "source":   { 
+      "version":  "1.2.8",
+      "prefix":   "/usr/local/nginx" 
+    },
     "dir":      "/usr/local/nginx/conf",
     "log_dir":  "/usr/local/nginx/log",
     "binary":   "/usr/local/nginx/sbin/nginx",
