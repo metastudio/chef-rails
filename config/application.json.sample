@@ -1,5 +1,5 @@
 {
-  "run_list": [ 
+  "run_list": [
     "recipe[ohai]", 
     "role[application]", 
     "role[frontend]", 
@@ -28,10 +28,10 @@
     }
   },
   "database": {
-    "host":     "mysql.picyou.com",
-    "name":     "picyou_staging",
-    "user":     "picyou-staging",
-    "password": "sfu9AByd8a&Shjdb28h"
+    "host":     "127.0.0.1",
+    "name":     "example_staging",
+    "user":     "example-staging",
+    "password": "blahmehwhatever"
   },
   "nginx": {
     "source":   { 
