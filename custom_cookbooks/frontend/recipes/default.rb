@@ -11,6 +11,9 @@ end
 
 # include file which included in main site config 
 # (in order to use same configuration for multiple servers: http and https for example)
+directory "#{node[:nginx][:dir]}/sites-available/conf.d" do
+  owner node[:nginx][:user]
+end
 template "#{node[:nginx][:dir]}/sites-available/conf.d/#{node[:application][:name]}.include.conf" do
   source "nginx.site.include.conf.erb"
   notifies :reload, resources(:service => "nginx")
