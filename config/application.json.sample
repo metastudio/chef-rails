@@ -1,12 +1,14 @@
 {
   "run_list": [
     "recipe[ohai]", 
+
     "role[application]", 
     "role[frontend]", 
+    "role[database-percona]",
+
     "recipe[redis]", 
     "recipe[rvm::system]", 
-    "recipe[postfix]",
-    "recipe[database::percona]"
+    "recipe[postfix]"
   ],
   "application": {
     "name": "example-app",

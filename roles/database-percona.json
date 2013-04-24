@@ -1,0 +1,7 @@
+{
+  "name": "database-percona",
+  "description": "Installs Percona and creates new database",
+  "run_list": [ "recipe[database::percona]" ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
