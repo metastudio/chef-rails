@@ -5,11 +5,7 @@ include_recipe 'percona::client'
 include_recipe 'percona::server'
 include_recipe 'percona::backup'
 
-# FIXME: can't use chef_gem here :(
-# https://github.com/rubygems/rubygems/issues/502
-bash 'install mysql gem' do
-  code 'gem install mysql --no-ri --no-rdoc'
-end
+chef_gem 'mysql'
 
 mysql_connection_info = { :host     => node[:database][:host],
                           :username => 'root',
