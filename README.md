@@ -7,12 +7,6 @@
 Set of roles and recipes for bootstrapping typical Ruby on Rails website. It uses nginx, unicorn and 
 Percona. Has been tested with Ubuntu 12.10 (see Vagrantfile).
 
-Example command to provision vagrant VM:
-
-```bash
-USER=vagrant CONFIG=application HOST=localhost SSH_OPTIONS='-p2222 -i ~/.vagrant.d/insecure_private_key' ./deploy.sh
-```
-
 ## Requirements
 
 1. You should be able to login as `root` to the target system.
@@ -20,7 +14,7 @@ USER=vagrant CONFIG=application HOST=localhost SSH_OPTIONS='-p2222 -i ~/.vagrant
 
 ## Configuration
 
-Rename ```config/application.json.sample``` to ```config/application.json```.
+All configuration stored in JSON files (one file per node). See http://matschaffer.github.io/knife-solo/ for details.
 
 ### user
 
@@ -41,17 +35,14 @@ If you'd like to do passwordless deploys (using SSH public keys), you may wish t
 
 ## Usage
 
+How to provision vagrant VM:
+
 ```bash
-USER=ubuntu HOST=192.168.2.103 CONFIG=application ./deploy.sh
+bundle install
+berks install --path site-cookbooks/
+vagrant up
+knife solo bootstrap vagrant@localhost nodes/application.json.sample -p 2222 -i ~/.vagrant.d/insecure_private_key
 ```
-
-Where:
-
-* ```USER``` is a user name which will be used to provision server
-* ```HOST``` is a hostname of the server which will be provisioned
-* ```CONFIG``` name of configuration file in config/ directory
-
-It will install ```ruby``` and ```chef```, copy ```chef``` files to the target hostname, and run the JSON configuration with specified name.
 
 ## Available Roles
 
