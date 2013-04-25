@@ -5,12 +5,12 @@
 # chef-solo cookbooks for Ruby on Rails app
 
 Set of roles and recipes for bootstrapping typical Ruby on Rails website. It uses nginx, unicorn and 
-MySQL. Has been tested with Ubuntu 12.04.
+Percona. Has been tested with Ubuntu 12.10 (see Vagrantfile).
 
 ## Requirements
 
 1. You should be able to login as `root` to the target system.
-2. Ruby 1.9.3
+2. Ruby 1.9.3 (will be installed automatically)
 
 ## Configuration
 
@@ -18,7 +18,7 @@ Rename ```config/application.json.sample``` to ```config/application.json```.
 
 ### user
 
-```chef``` will create user which will be an owner of app directory. ```unicorn``` also will be started by this user. This user should be used when deploying with ```capistrano```.
+```chef``` will create user (```node[:application][:user][:name]```) which will be an owner of app directory. ```unicorn``` also will be started by this user. This user should be used when deploying with ```capistrano```.
 
 ### redirect_urls
 
@@ -59,4 +59,8 @@ Installs ```nginx``` and configures it to use ```unicorn``` as upstream.
 
 ### database
 
-Install MySQL server.
+Install Percona server.
+
+### mail
+
+Install Postfix which will be accepting mails from local processess.
