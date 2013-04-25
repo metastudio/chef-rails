@@ -7,6 +7,12 @@
 Set of roles and recipes for bootstrapping typical Ruby on Rails website. It uses nginx, unicorn and 
 Percona. Has been tested with Ubuntu 12.10 (see Vagrantfile).
 
+Example command to provision vagrant VM:
+
+```bash
+USER=vagrant CONFIG=application HOST=localhost SSH_OPTIONS='-p2222 -i ~/.vagrant.d/insecure_private_key' ./deploy.sh
+```
+
 ## Requirements
 
 1. You should be able to login as `root` to the target system.
