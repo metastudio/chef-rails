@@ -1,7 +1,7 @@
 {
   "name": "application",
   "description": "Ruby on Rails application",
-  "run_list": [ "recipe[monit]", "recipe[application]", "recipe[rvm::system]", "recipe[rvm::vagrant]", "recipe[rvm::gem_package]" ],
+  "run_list": [ "recipe[monit]", "recipe[application]", "recipe[rvm::system]", "recipe[rvm::gem_package]" ],
   "default_attributes": {
     "rvm": { "default_ruby": "ruby-1.9.3" }
   },
