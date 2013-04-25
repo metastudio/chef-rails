@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
@@ -71,6 +71,11 @@ Vagrant::Config.run do |config|
     json = JSON.parse(File.read('config/application.json.sample'))
     chef.json     = json
     chef.run_list = json['run_list']
+  end
+
+  config.vm.provider "virtualbox" do |v|
+    v.customize ["modifyvm", :id, "--memory", "1024"]
+    v.customize ["modifyvm", :id, "--cpus",   "2"]
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
