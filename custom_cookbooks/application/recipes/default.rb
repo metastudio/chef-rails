@@ -17,7 +17,6 @@ end
 
 # monit
 
-include_recipe "monit::default"
 include_recipe "application::monit"
 
 # init

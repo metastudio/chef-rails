@@ -1,15 +1,11 @@
 {
   "run_list": [
-    "recipe[ohai]", 
-
-    "role[application]", 
+    "role[application]",
     "role[frontend]", 
     "role[database-percona]",
-
-    "recipe[redis]", 
-    "recipe[rvm::system]", 
-    "recipe[postfix]"
+    "role[mail]"
   ],
+
   "application": {
     "name": "example-app",
     "path": "/var/www/rails/example-app",
@@ -29,12 +25,14 @@
       "certificate_key_path": "/usr/local/nginx/conf/server.key"
     }
   },
+
   "database": {
     "host":     "127.0.0.1",
     "name":     "example_staging",
     "user":     "example-staging",
     "password": "blahmehwhatever"
   },
+
   "nginx": {
     "source":   { 
       "version":  "1.2.8",
@@ -46,10 +44,11 @@
     "user":     "www-data",
     "init_style": "init"
   },
+
   "rvm": {
-    "default_ruby": "ruby-1.9.3",
     "group_users": ["example-app"]
   },
+
   "authorization": {
     "sudo": {
       "groups": ["sudo", "admin"],
@@ -59,6 +58,7 @@
       ]
     }
   },
+
  "percona": {
     "server": {
       "debian_password": "change-me",
@@ -68,9 +68,11 @@
       "password": "change-me"
     }
   },
+
   "backup": {
     "directory": "/backup"
   },
+
   "email": {
     "support": "support@example.com"
   }

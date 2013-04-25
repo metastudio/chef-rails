@@ -1,0 +1,7 @@
+{
+  "name": "mail",
+  "description": "SMTP server which delivers mail sent by local processess",
+  "run_list": [ "recipe[postfix]" ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
