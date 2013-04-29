@@ -10,8 +10,11 @@ end
 
 # We need to add keys to authorized_keys in order to be able
 # to deploy without password
+
+all_keys = search(:authorized_keys, '*:*').to_a
+all_keys.select! { |key| node[:authorization][:ssh].include?(key['id']) } if node[:authorization][:ssh]
 authorize_public_keys do
-  data_bag "authorized_keys"
+  keys all_keys.map{|data_bag_item| data_bag_item['key']}
   username node[:application][:user][:name]
 end
 

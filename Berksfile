@@ -6,6 +6,7 @@ cookbook 'yum'
 cookbook 'build-essential'
 cookbook 'htpasswd', git: 'https://github.com/Youscribe/htpasswd-cookbook.git'
 cookbook 'sudo'
+cookbook 'chef-solo-search', git: 'https://github.com/edelight/chef-solo-search'
 
 # Ruby
 

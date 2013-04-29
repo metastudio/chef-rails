@@ -56,7 +56,9 @@
       "commands": [
         "/usr/bin/monit -g background restart"
       ]
-    }
+    },
+
+    "ssh": [ "alexander", "andrey", "ildar" ]
   },
 
  "percona": {
