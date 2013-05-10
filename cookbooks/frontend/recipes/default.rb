@@ -14,7 +14,10 @@ end
 directory "#{node[:nginx][:dir]}/sites-available/conf.d" do
   owner node[:nginx][:user]
 end
-template "#{node[:nginx][:dir]}/sites-available/conf.d/#{node[:application][:name]}.include.conf" do
+
+directory "#{node[:nginx][:dir]}/sites-available/conf.d/#{node[:application][:name]}"
+
+template "#{node[:nginx][:dir]}/sites-available/conf.d/#{node[:application][:name]}/include.conf" do
   source "nginx.site.include.conf.erb"
   notifies :reload, resources(:service => "nginx")
 end

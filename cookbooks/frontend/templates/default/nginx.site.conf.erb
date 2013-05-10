@@ -13,7 +13,7 @@ server {
 server {
   listen 80;
 
-  include sites-available/conf.d/<%= node[:application][:name] %>.include.conf;
+  include sites-available/conf.d/<%= node[:application][:name] %>/*.conf;
 }
 
 <% if node[:application][:ssl] %>
@@ -26,6 +26,6 @@ server {
 
   keepalive_timeout 70;
 
-  include sites-available/conf.d/<%= node[:application][:name] %>.include.conf;
+  include sites-available/conf.d/<%= node[:application][:name] %>/*.conf;
 }
 <% end %>
