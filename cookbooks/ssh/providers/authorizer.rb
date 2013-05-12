@@ -7,4 +7,6 @@ action :authorize do
     mode 0600
     variables keys: new_resource.keys
   end
+
+  new_resource.updated_by_last_action(true)
 end
