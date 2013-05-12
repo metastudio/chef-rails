@@ -1,6 +1,6 @@
-include_recipe "application::software"
-include_recipe "application::capistrano"
-include_recipe "application::config"
+include_recipe "#{cookbook_name}::software"
+include_recipe "#{cookbook_name}::capistrano"
+include_recipe "#{cookbook_name}::config"
 
 # We need to generate SSH key for application account in order to add
 # it to the SCM
@@ -17,7 +17,7 @@ end
 
 # monit
 
-include_recipe "application::monit"
+include_recipe "#{cookbook_name}::monit"
 
 # init
 
