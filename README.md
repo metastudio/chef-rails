@@ -35,7 +35,6 @@ How to provision vagrant VM:
 
 ```bash
 bundle install
-berks install --path site-cookbooks/
 vagrant up
 knife solo bootstrap vagrant@localhost nodes/application.json.sample -p 2222 -i ~/.vagrant.d/insecure_private_key
 ```

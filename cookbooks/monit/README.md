@@ -1,1 +1,0 @@
-# chef-rails monit cookbook

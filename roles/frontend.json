@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "description": "runs lightweight nginx webserver",
-  "run_list": [ "recipe[frontend::default]" ],
+  "run_list": [ "recipe[chef-rails-frontend::default]" ],
   "chef_type": "role",
   "json_class": "Chef::Role"
 }
