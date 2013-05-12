@@ -31,8 +31,7 @@ This option can be used if you need to protect the website using HTTP Basic Auth
 
 ## Passwordless deploys
 
-If you'd like to do passwordless deploys (using SSH public keys), you may wish to add public keys of users which should have such ability to the ```data_bags/authorized_keys/``` folder. These keys should be also added to the node configuration under the
-```node[:authorization][:ssh]```.
+If you'd like to do passwordless deploys (using SSH public keys), you may wish to add public keys of users which should have such ability to the ```data_bags/authorized_keys/``` folder. These keys should be also added to the node configuration under the ```node[:authorization][:ssh]```.
 
 ## Usage
 
