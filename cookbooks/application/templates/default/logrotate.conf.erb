@@ -1,0 +1,10 @@
+<%= node[:application][:current_path] %>/log/<%= node[:application][:environment] %>.log {
+  daily
+  rotate 10
+  create 600 <%= node[:application][:user][:name] %> <%= node[:application][:user][:name] %>
+  size 64k
+  compress
+  notifempty
+  dateext
+  copytruncate
+}
