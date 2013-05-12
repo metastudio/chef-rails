@@ -32,3 +32,8 @@ if node[:application][:http_auth]
     password  node[:application][:http_auth][:password]
   end
 end
+
+template "/etc/logrotate.d/nginx" do
+  source "nginx.logrotate.conf.erb"
+  mode 0644
+end

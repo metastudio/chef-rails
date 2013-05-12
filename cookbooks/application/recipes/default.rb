@@ -39,3 +39,8 @@ sudo node[:application][:name] do
   commands commands
   nopasswd true
 end
+
+template "/etc/logrotate.d/#{node[:application][:name]}" do
+  source "logrotate.conf.erb"
+  mode 0644
+end

@@ -1,7 +1,3 @@
-# TODO
-
-* configure logrotate
-
 # chef-solo cookbooks for Ruby on Rails app
 
 Set of roles and recipes for bootstrapping typical Ruby on Rails website. It uses nginx, unicorn and 

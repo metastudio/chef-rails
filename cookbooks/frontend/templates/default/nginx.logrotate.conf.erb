@@ -1,0 +1,13 @@
+<%= node[:nginx][:log_dir] %>/*.log {
+    daily
+    compress
+    delaycompress
+    rotate 52
+    missingok
+    create 640 root adm
+    notifempty
+    sharedscripts
+    postrotate
+        test ! -f <%= node[:nginx][:pid] %> || kill -USR1 `cat <%= node[:nginx][:pid] %>`
+    endscript
+}
