@@ -6,7 +6,7 @@ cookbook 'chef-rails-ssh',         git: 'https://github.com/metastudio/chef-rail
 cookbook 'chef-rails-application', git: 'https://github.com/metastudio/chef-rails-application.git'
 cookbook 'chef-rails-database',    git: 'https://github.com/metastudio/chef-rails-database.git'
 cookbook 'chef-rails-frontend',    git: 'https://github.com/metastudio/chef-rails-frontend.git'
-cookbook 'chef-rails-monit',       git: 'https://github.com/metastudio/chef-rails-monit.git'
+cookbook 'chef-rails-monitoring',  git: 'https://github.com/metastudio/chef-rails-monitoring.git'
 
 # Community cookbooks
 
