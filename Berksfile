@@ -24,7 +24,7 @@ cookbook 'rvm', git: 'https://github.com/fnichol/chef-rvm.git'
 
 # Server
 
-cookbook 'nginx', git: 'https://github.com/metastudio/nginx.git'
+cookbook 'nginx'
 
 # Mail
 
